@@ -75,8 +75,6 @@ class Ticket extends Admin
                 'tel'=>$post_data['tel'],
                 'address'=>$post_data['address'],
                 'content'=>$post_data['content'],
-//                'create_time'=>date('Y-m-d H:i:s',time()),
-//                'update_time'=>date('Y-m-d H:i:s',time()),
             ]);
             if($data){
                 $this->success('新增成功', url('index'));
