@@ -19,7 +19,7 @@ class Ticket extends Admin
         $pid = input('get.pid', 0);
         $ticket = Db::table('twothink_ticket')->paginate(2);
         $page = $ticket->render();
-        $this->assign('ticket',$ticket);
+        $this->assign('ticket',$ticket);//
         $this->assign('page',$page);
         $this->assign('pid', $pid);
         $this->assign('meta_title' , '报修管理');
