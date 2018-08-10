@@ -1,13 +1,13 @@
 .idea
 composer.lock
-composer.json
+#composer.json
 *.log
 
 #必须
-/thinkphp/
-/vendor/
-/runtime/
-LICENSE.txt
-/log/
-.idea/
+#/thinkphp/
+#/vendor/
+#/runtime/
+#LICENSE.txt
+#/log/
+#.idea/
 

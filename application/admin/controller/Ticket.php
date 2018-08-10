@@ -110,4 +110,9 @@ class Ticket extends Admin
 
     }
 
+//    public function sort(Request $request)
+//    {
+//        var_dump($request->tid);die;
+//
+//    }
 }

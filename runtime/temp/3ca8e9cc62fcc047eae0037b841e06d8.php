@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"D:\www\tp5\public/../application/admin/view/default/ticket\index.html";i:1533830688;s:68:"D:\www\tp5\public/../application/admin/view/default/public\base.html";i:1496373782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"D:\www\tp5\public/../application/admin/view/default/ticket\index.html";i:1533865083;s:68:"D:\www\tp5\public/../application/admin/view/default/public\base.html";i:1496373782;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -106,7 +106,7 @@
 
 <div class="cf">
     <a class="btn" href="<?php echo url('add'); ?>">新 增</a>
-    <a class="btn" href="javascript:;">删 除</a>
+    <a class="btn confirm ajax-post" href="/admin/ticket/del" target-form="ids">删 除</a>
     <button class="btn list_sort" url="<?php echo url('sort',array('pid'=>input('get.pid',0)),''); ?>">排序</button>
 </div>
 
@@ -128,7 +128,7 @@
         <tbody>
         <?php if(!(empty($ticket) || (($ticket instanceof \think\Collection || $ticket instanceof \think\Paginator ) && $ticket->isEmpty()))): if(is_array($ticket) || $ticket instanceof \think\Collection || $ticket instanceof \think\Paginator): $i = 0; $__LIST__ = $ticket;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ticket): $mod = ($i % 2 );++$i;?>
         <tr>
-            <td><input class="ids row-selected" type="checkbox" name="" id="" value="<?php echo $ticket['id']; ?>"> </td>
+            <td><input class="ids row-selected" type="checkbox" name="id[]" id="" value="<?php echo $ticket['id']; ?>"> </td>
             <td><?php echo $ticket['id']; ?></td>
             <td><a href="<?php echo url('index?pid='.$ticket['id']); ?>"><?php echo $ticket['title']; ?></a></td>
             <td><?php echo $ticket['name']; ?></td>
